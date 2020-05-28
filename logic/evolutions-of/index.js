@@ -1,4 +1,20 @@
 const evolutionOf = (pokeArray, name) => {
+  result = [];
+  const pokemon = pokeArray.find(p => p.name === name);
+  if (!pokemon){
+    return null;
+  }
+  
+  if (Array.isArray(pokemon.prev_evolution)){
+    result.push(...pokemon.prev_evolution)
+  }
+  result.push({name:pokemon.name , num:pokemon.num })
+  
+  if (Array.isArray(pokemon.next_evolution)){
+    result.push(...pokemon.next_evolution)
+  }
+  
+  return result;
 
 };
 
