@@ -55,7 +55,8 @@ describe("valuesForKey(pokeData, key) : returns all unique values stored in that
       ['Fighting'],
       ['Electric', 'Grass'],
       ['Electric', 'Rock'],
-      ['Electric', 'Grass', 'Fighting', 'Rock']
+      ['Electric', 'Grass', 'Fighting', 'Rock'],
+      
     ];
     assert.deepStrictEqual(actual, expected);
   });
