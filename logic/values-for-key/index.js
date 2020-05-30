@@ -2,11 +2,13 @@ const isEqual = require('lodash').isEqual;
 
 const valuesForKey = (pokeArray, key) => {
   let result = [];
-  for (let pokemon of pokeArray){
-    if ((!result.includes(pokemon[key]) && pokemon[key] !== undefined)){
-      result.push(pokemon[key]);
+  for (let arr_key of Object.entries(pokeArray)){
+    if (arr_key[0] === key){
+      let value = pokeArray[arr_key[1]];
+      if ((!result.includes(value) && value !== undefined)) {
+        result.push(value);
+      }
     }
-    
   }
   console.log('feridun',result);
   
